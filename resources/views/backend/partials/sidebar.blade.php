@@ -9,6 +9,13 @@
         </a>
       </li><!-- End Dashboard Nav -->
 
+      <li class="nav-item">
+        <a class="nav-link " href="{{route('institute.list')}}">
+          <i class="bi bi-grid"></i>
+          <span>Institute</span>
+        </a>
+      </li>
+
       
     </ul>
 

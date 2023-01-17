@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\backend\DashboardController;
+use App\Http\Controllers\backend\InstituteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,5 +18,11 @@ use App\Http\Controllers\backend\DashboardController;
 Route::get('/', function () {
     return view('welcome');
 });
-
+      //DashboardController
 Route::get('/admin-page',[DashboardController::class,'master'])->name('dashboard');
+
+
+          //InstituteController
+Route::get('/instituteList-page',[InstituteController::class,'list'])->name('institute.list');
+Route::get('/institute-form',[InstituteController::class,'form'])->name('institute.form');
+Route::post('/institute-store',[InstituteController::class,'store'])->name('institute.store');
