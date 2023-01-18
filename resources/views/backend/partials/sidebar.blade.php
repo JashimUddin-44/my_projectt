@@ -16,6 +16,13 @@
         </a>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link " href="{{route('class.show')}}">
+          <i class="bi bi-grid"></i>
+          <span>class</span>
+        </a>
+      </li>
+
       
     </ul>
 
