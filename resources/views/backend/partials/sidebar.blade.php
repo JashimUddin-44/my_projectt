@@ -23,6 +23,20 @@
         </a>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link " href="{{ route('dptList.show') }}">
+          <i class="bi bi-grid"></i>
+          <span>Department</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link " href="{{route('section.show')}}">
+          <i class="bi bi-grid"></i>
+          <span>Section</span>
+        </a>
+      </li>
+
       
     </ul>
 

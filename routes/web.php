@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\backend\DashboardController;
 use App\Http\Controllers\backend\InstituteController;
 use App\Http\Controllers\backend\ClassController;
+use App\Http\Controllers\backend\DepartmentController;
+use App\Http\Controllers\backend\SectionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +42,24 @@ Route::post('/class_store',[ClassController::class,'store'])->name('store.data')
 Route::get('/editer/{class_id}',[ClassController::class,'editer'])->name('edit.class');       
 Route::put('/update-data/{id}',[ClassController::class,'updates']); 
 Route::get('/delete-class/{id}',[ClassController::class,'destroy']);
+
+
+
+//DepartmentController
+Route::get('/department-form',[DepartmentController::class,'dpform']);     
+Route::post('/department-store',[DepartmentController::class,'dpstore'])->name('department.store');     
+Route::get('/departmentList-show',[DepartmentController::class,'dptList'])->name('dptList.show');     
+Route::get('/department-edit/{id}',[DepartmentController::class,'dptedit']);     
+Route::put('/department-update/{id}',[DepartmentController::class,'dptupdate'])->name('department.update');     
+Route::get('/delete/{id}',[DepartmentController::class,'destroy'])->name('delete.department');
+
+
+
+
+//SectionController
+Route::get('/section-form',[SectionController::class,'create']); 
+Route::post('section-store',[SectionController::class,'case'])->name('section.store');
+Route::get('section_show',[SectionController::class,'show'])->name('section.show');
+Route::get('section-edit/{id}',[SectionController::class,'edit'])->name('section.edit');
+Route::put('section-update/{id}',[SectionController::class,'update'])->name('update.section');
+Route::get('section-delete/{id}',[SectionController::class,'destroy'])->name('section.delete');
