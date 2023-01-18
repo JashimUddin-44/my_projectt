@@ -37,6 +37,13 @@
         </a>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link " href="{{route('view')}}">
+          <i class="bi bi-grid"></i>
+          <span>Student</span>
+        </a>
+      </li>
+
       
     </ul>
 

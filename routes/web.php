@@ -6,6 +6,7 @@ use App\Http\Controllers\backend\InstituteController;
 use App\Http\Controllers\backend\ClassController;
 use App\Http\Controllers\backend\DepartmentController;
 use App\Http\Controllers\backend\SectionController;
+use App\Http\Controllers\backend\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,3 +64,14 @@ Route::get('section_show',[SectionController::class,'show'])->name('section.show
 Route::get('section-edit/{id}',[SectionController::class,'edit'])->name('section.edit');
 Route::put('section-update/{id}',[SectionController::class,'update'])->name('update.section');
 Route::get('section-delete/{id}',[SectionController::class,'destroy'])->name('section.delete');
+
+
+
+
+ //StudentController
+ Route::get('/student-create',[StudentController::class,'create']);
+ Route::post('/student_store',[StudentController::class,'store'])->name('student.store');
+ Route::get('student_show',[StudentController::class,'show'])->name('view');
+ Route::get('/student-edit/{student_id}',[StudentController::class,'edits'])->name('student.edit');
+ Route::put('/student-update/{id}', [StudentController::class,'update'])->name('student.update');
+ Route::get('student-delete/{id}',[StudentController::class,'destroy'])->name('student.delete');
