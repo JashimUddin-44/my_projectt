@@ -26,3 +26,6 @@ Route::get('/admin-page',[DashboardController::class,'master'])->name('dashboard
 Route::get('/instituteList-page',[InstituteController::class,'list'])->name('institute.list');
 Route::get('/institute-form',[InstituteController::class,'form'])->name('institute.form');
 Route::post('/institute-store',[InstituteController::class,'store'])->name('institute.store');
+Route::get('/institute-edit/{id}',[InstituteController::class,'edit'])->name('institute.edit');
+Route::put('/institute-update/{id}',[InstituteController::class,'update'])->name('institute.update');
+Route::get('/institute-delete/{id}',[InstituteController::class,'delete'])->name('institute.delete');
